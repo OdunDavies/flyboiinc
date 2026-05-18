@@ -72,21 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FLYBOI INC — Independent Record Label" },
-      {
-        name: "description",
-        content:
-          "FLYBOI INC is the independent record label founded by Kizz Daniel. Home of platinum-selling Afropop, releasing music worldwide since 2018.",
-      },
-      { name: "author", content: "FLYBOI INC" },
-      { property: "og:title", content: "FLYBOI INC — Independent Record Label" },
-      {
-        property: "og:description",
-        content: "The independent label founded by Kizz Daniel. Home of Maverick, Barnabas, King of Love and the global hit BUGA.",
-      },
+      { title: "Kizz daniel" },
+      { name: "description", content: "FLYBOI Studio builds a dynamic music artist website for FLYBOI INC." },
+      { name: "author", content: "Lovable" },
+      { property: "og:title", content: "Kizz daniel" },
+      { property: "og:description", content: "FLYBOI Studio builds a dynamic music artist website for FLYBOI INC." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Kizz daniel" },
+      { name: "twitter:description", content: "FLYBOI Studio builds a dynamic music artist website for FLYBOI INC." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a52e5a60-58d7-45cb-8fe0-31b148dcb6c2/id-preview-7bb7fbc5--5859488c-dba3-4a78-97fa-3a19a1ce5927.lovable.app-1779099517036.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/a52e5a60-58d7-45cb-8fe0-31b148dcb6c2/id-preview-7bb7fbc5--5859488c-dba3-4a78-97fa-3a19a1ce5927.lovable.app-1779099517036.png" },
     ],
     links: [
       {
