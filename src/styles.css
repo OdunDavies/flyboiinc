@@ -4,6 +4,14 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --font-display: "Bebas Neue", cursive;
+  --font-condensed: "Barlow Condensed", sans-serif;
+  --font-body: Barlow, sans-serif;
+  --color-brand-gold: rgba(255, 200, 60, 0.75);
+  --color-brand-gold-dim: rgba(255, 200, 60, 0.45);
+}
+
 /*
  * Design system definition.
  *
@@ -141,4 +149,8 @@
     background-color: var(--color-background);
     color: var(--color-foreground);
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
