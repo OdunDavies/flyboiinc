@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import kizz from "@/assets/kizz-2.jpg";
 
 const container = {
   hidden: {},
@@ -11,51 +12,58 @@ const item = {
 
 export function Hero() {
   return (
-    <section className="relative w-full h-screen overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1000] to-[#0d0d0d]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/85" />
-
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div
-          className="w-[340px] h-[520px] bg-gradient-to-b from-[rgba(255,200,50,0.06)] to-transparent drop-shadow-[0_0_80px_rgba(255,160,0,0.08)]"
-          style={{ borderRadius: "50% 50% 0 0 / 40% 40% 0 0" }}
-        />
-      </div>
+    <section id="top" className="relative w-full h-screen overflow-hidden bg-black">
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${kizz})` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/95" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
 
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="absolute bottom-0 left-0 p-10 pb-14 md:pb-20"
+        className="relative z-10 h-full flex flex-col justify-end px-6 md:px-12 pb-16 md:pb-24 max-w-[1200px]"
       >
         <motion.p
           variants={item}
-          className="font-condensed text-[11px] tracking-[4px] uppercase text-white/55 mb-2.5"
+          className="font-condensed text-[11px] tracking-[5px] uppercase text-brand-gold mb-3"
         >
-          Flyboi Inc. Presents
+          Independent Record Label · Est. 2018
         </motion.p>
         <motion.h1
           variants={item}
-          className="font-display text-white leading-[0.92] tracking-wide"
-          style={{ fontSize: "clamp(52px, 9vw, 110px)" }}
+          className="font-display text-white leading-[0.88] tracking-wide"
+          style={{ fontSize: "clamp(60px, 11vw, 160px)" }}
         >
-          Kizz
+          FLYBOI
           <br />
-          Daniel
+          INC.
         </motion.h1>
         <motion.p
           variants={item}
-          className="font-condensed text-[13px] tracking-[5px] uppercase text-white/50 mt-3.5"
+          className="font-body text-[15px] md:text-[17px] leading-[1.6] text-white/70 mt-5 max-w-[560px]"
         >
-          The New Album · Twe Twe · Out Now
+          Founded by Grammy-nominated Afropop superstar <span className="text-white">Kizz Daniel</span>,
+          FLYBOI INC is the independent label behind some of Africa's biggest global exports —
+          from the diamond-certified <em className="not-italic text-white">BUGA</em> to the
+          chart-topping <em className="not-italic text-white">Maverick</em> album.
         </motion.p>
-        <motion.button
-          variants={item}
-          className="mt-7 inline-flex items-center gap-2.5 bg-white/10 border border-white/25 px-6 py-3 font-condensed text-[12px] tracking-[3px] uppercase text-white hover:bg-white/20 hover:border-white/50 transition-all"
-        >
-          Listen Now
-          <span aria-hidden>→</span>
-        </motion.button>
+        <motion.div variants={item} className="mt-8 flex flex-wrap gap-3">
+          <a
+            href="#releases"
+            className="bg-white text-black px-6 py-3 font-condensed text-[12px] tracking-[3px] uppercase hover:bg-white/85 transition-colors"
+          >
+            Explore Releases
+          </a>
+          <a
+            href="#roster"
+            className="border border-white/30 text-white px-6 py-3 font-condensed text-[12px] tracking-[3px] uppercase hover:border-white/70 transition-colors"
+          >
+            Meet The Roster
+          </a>
+        </motion.div>
       </motion.div>
 
       <div className="absolute bottom-7 right-10 hidden md:flex flex-col items-center gap-3">
