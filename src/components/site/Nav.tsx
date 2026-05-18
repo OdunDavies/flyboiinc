@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
-const links = ["Music", "Tour", "Videos", "Store", "About"];
-const socials = ["IG", "Spotify", "YT"];
+const links = ["Label", "Roster", "Releases", "Tour", "Contact"];
 
 export function Nav() {
   return (

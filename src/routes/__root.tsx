@@ -72,11 +72,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "FLYBOI INC — Independent Record Label" },
+      {
+        name: "description",
+        content:
+          "FLYBOI INC is the independent record label founded by Kizz Daniel. Home of platinum-selling Afropop, releasing music worldwide since 2018.",
+      },
+      { name: "author", content: "FLYBOI INC" },
+      { property: "og:title", content: "FLYBOI INC — Independent Record Label" },
+      {
+        property: "og:description",
+        content: "The independent label founded by Kizz Daniel. Home of Maverick, Barnabas, King of Love and the global hit BUGA.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
