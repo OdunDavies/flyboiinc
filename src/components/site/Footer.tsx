@@ -1,10 +1,10 @@
 const socials = [
-  { label: "Instagram", href: "https://instagram.com/kizzdaniel/?hl=en" },
-  { label: "Twitter / X", href: "https://twitter.com/KizzDaniel" },
-  { label: "Facebook", href: "https://facebook.com/iamkizzdaniel/?locale=rw_RW" },
-  { label: "Spotify", href: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV" },
-  { label: "Apple Music", href: "https://music.apple.com/us/artist/kizz-daniel/1383857742" },
-  { label: "Official Site", href: "https://kizzdaniel.com" },
+  { label: "Instagram", href: "https://instagram.com/flyboinchq" },
+  { label: "YouTube", href: "https://www.youtube.com/@KizzDanielchannel" },
+  { label: "Roster", href: "#roster" },
+  { label: "Releases", href: "#releases" },
+  { label: "Tour", href: "#tour" },
+  { label: "Contact", href: "#contact" },
 ];
 const legal = [
   { label: "Privacy", href: "#" },

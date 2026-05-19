@@ -5,6 +5,7 @@ import { LabelSection } from "@/components/site/LabelSection";
 import { ArtistSection } from "@/components/site/ArtistSection";
 import { CatalogueSection } from "@/components/site/CatalogueSection";
 import { TourSection } from "@/components/site/TourSection";
+import { YoutubeSection } from "@/components/site/YoutubeSection";
 import { ContactSection } from "@/components/site/ContactSection";
 import { Footer } from "@/components/site/Footer";
 
@@ -35,6 +36,7 @@ function Index() {
       <LabelSection />
       <ArtistSection />
       <CatalogueSection />
+      <YoutubeSection />
       <TourSection />
       <ContactSection />
       <Footer />
