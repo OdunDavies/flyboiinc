@@ -64,7 +64,7 @@ export function ArtistSection() {
             </p>
             <div className="grid grid-cols-2 gap-4 pt-2">
               <a
-                href="https://open.spotify.com/artist/2yczTYG2reJjOZ8Le3DqOK"
+                href="https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
@@ -72,7 +72,7 @@ export function ArtistSection() {
                 Spotify
               </a>
               <a
-                href="https://music.apple.com/us/artist/kizz-daniel/919393321"
+                href="https://music.apple.com/us/artist/kizz-daniel/1383857742"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
@@ -80,7 +80,7 @@ export function ArtistSection() {
                 Apple Music
               </a>
               <a
-                href="https://www.instagram.com/kizzdaniel"
+                href="https://instagram.com/kizzdaniel/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
@@ -88,12 +88,12 @@ export function ArtistSection() {
                 Instagram
               </a>
               <a
-                href="https://www.youtube.com/@KizzDanielVEVO"
+                href="https://kizzdaniel.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
               >
-                YouTube
+                kizzdaniel.com
               </a>
             </div>
           </motion.div>
