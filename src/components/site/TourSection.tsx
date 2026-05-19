@@ -17,7 +17,7 @@ export function TourSection() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="bg-[#060606] py-24 flex justify-center">
+    <section id="tour" ref={ref} className="bg-[#060606] py-20 md:py-24 flex justify-center">
       <div className="w-full max-w-[900px] px-5">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -42,12 +42,12 @@ export function TourSection() {
               initial={{ opacity: 0, y: 15 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.1 + i * 0.07 }}
-              className="flex items-center justify-between py-5 border-b border-white/10 hover:bg-white/[0.02] transition-colors cursor-pointer gap-4"
+              className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-5 border-b border-white/10 hover:bg-white/[0.02] transition-colors cursor-pointer gap-3 sm:gap-4"
             >
-              <span className="font-condensed text-[12px] tracking-[3px] uppercase text-brand-gold min-w-[110px]">
+              <span className="font-condensed text-[12px] tracking-[3px] uppercase text-brand-gold sm:min-w-[110px]">
                 {d.date}
               </span>
-              <div className="flex-1">
+              <div className="flex-1 min-w-0">
                 <div className="font-condensed text-[16px] md:text-[18px] tracking-wider text-white">
                   {d.venue}
                 </div>
@@ -55,7 +55,7 @@ export function TourSection() {
               </div>
               <a
                 href="#"
-                className="font-condensed text-[11px] tracking-[2px] uppercase border border-white/15 px-4 py-2 text-white/60 hover:text-white hover:border-white/45 transition-all whitespace-nowrap"
+                className="font-condensed text-[11px] tracking-[2px] uppercase border border-white/15 px-4 py-2 text-white/60 hover:text-white hover:border-white/45 transition-all whitespace-nowrap self-start sm:self-auto"
               >
                 Tickets
               </a>
