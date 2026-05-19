@@ -62,39 +62,31 @@ export function ArtistSection() {
               became a worldwide phenomenon — racking up over a billion combined streams,
               topping charts across 15+ African nations and earning a 2023 Grammy nomination.
             </p>
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <a
-                href="https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
-              >
-                Spotify
-              </a>
-              <a
-                href="https://music.apple.com/us/artist/kizz-daniel/1383857742"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
-              >
-                Apple Music
-              </a>
-              <a
-                href="https://instagram.com/kizzdaniel/?hl=en"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://kizzdaniel.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-white/20 px-5 py-3 font-condensed text-[11px] tracking-[3px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
-              >
-                kizzdaniel.com
-              </a>
+            <div className="pt-4">
+              <p className="font-condensed text-[10px] tracking-[4px] uppercase text-white/35 mb-3">
+                Follow Kizz Daniel
+              </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {[
+                  { label: "Spotify", href: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV" },
+                  { label: "Apple Music", href: "https://music.apple.com/us/artist/kizz-daniel/1383857742" },
+                  { label: "YouTube", href: "https://www.youtube.com/@KizzDanielchannel" },
+                  { label: "Instagram", href: "https://instagram.com/kizzdaniel/?hl=en" },
+                  { label: "Twitter / X", href: "https://twitter.com/KizzDaniel" },
+                  { label: "Facebook", href: "https://facebook.com/iamkizzdaniel/?locale=rw_RW" },
+                  { label: "kizzdaniel.com", href: "https://kizzdaniel.com" },
+                ].map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="border border-white/20 px-4 py-3 font-condensed text-[11px] tracking-[2px] uppercase text-white/80 hover:bg-white hover:text-black transition-colors text-center"
+                  >
+                    {s.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </motion.div>
         </div>
