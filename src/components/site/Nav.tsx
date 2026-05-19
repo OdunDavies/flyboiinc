@@ -26,7 +26,7 @@ export function Nav() {
           ))}
         </div>
         <a
-          href="https://open.spotify.com/artist/2yczTYG2reJjOZ8Le3DqOK"
+          href="https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden md:inline-flex font-condensed text-[11px] tracking-[2px] uppercase border border-white/25 px-4 py-2 text-white hover:bg-white hover:text-black transition-colors"
