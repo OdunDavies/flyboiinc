@@ -1,72 +1,140 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
+// Cover art sourced from official Apple Music / iTunes artwork (600x600)
+// Catalogue mirrors Kizz Daniel's official Spotify artist page (1X6cBGnXpEpN7CmflLKmLV)
 const releases = [
   {
-    year: "2023",
-    title: "Maverick",
-    type: "Studio Album",
+    year: "2025",
+    title: "To Be A Man",
+    type: "Single",
     artist: "Kizz Daniel",
-    tint: "from-[#3a1a08] via-[#1a0d04] to-[#050505]",
-    accent: "rgba(255,140,40,0.25)",
-    spotify: "https://open.spotify.com/album/4HMpwGdCBsfXzCNvfqJ7tD",
-    apple: "https://music.apple.com/us/album/maverick/1716818831",
-    youtube: "https://www.youtube.com/playlist?list=OLAK5uy_lXfWnxELIqyzr9p4SShzZdPyzcOIQQE6c",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/f0/1b/dc/f01bdc23-2071-e9a3-2383-cb58b0dd2d2e/199316236736_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/to-be-a-man-single/1834032705",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2025",
+    title: "Police",
+    type: "Single ft. Angélique Kidjo & Johnny Drille",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/7a/72/14/7a721430-1ab3-00f0-361e-496069342983/199316031485_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/police-single/1804719797",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2024",
+    title: "TZA",
+    type: "EP",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/90/6a/00/906a00ed-e947-8a99-c5f5-b8ecf5cdb98c/197342533546_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/tza-ep/1734308060",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2024",
+    title: "Twe Twe",
+    type: "Single (Remix ft. Davido)",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/24/2f/cd/242fcd2e-7a95-a306-f7e1-0504e1aba738/197342471053_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/twe-twe-single/1726078503",
+    youtube: "https://www.youtube.com/watch?v=Im_VleEWPDQ",
+  },
+  {
+    year: "2023",
+    title: "Cough (Odo)",
+    type: "Single ft. Becky G",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/db/9d/9a/db9d9a2b-0f0a-7ff5-8e47-dbde5a2895b7/197342259804_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/cough-single/1692865098",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2023",
+    title: "Shu-Peru",
+    type: "Single",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/fb/6d/f6/fb6df6c2-5544-4ef7-1824-df4e8c1ceb2e/197342121095_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/shu-peru-single/1681900665",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2023",
+    title: "RTID (Rich Till I Die)",
+    type: "Single",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/db/f4/8e/dbf48e21-9959-4e48-7a93-944b1c15e0d5/194690941917_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/rtid-rich-till-i-die-single/1644400554",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
   },
   {
     year: "2022",
-    title: "BUGA (Lo Lo Lo)",
+    title: "Buga (Lo Lo Lo)",
     type: "Single ft. Tekno",
     artist: "Kizz Daniel",
-    tint: "from-[#2a2a08] via-[#1a1404] to-[#050505]",
-    accent: "rgba(255,200,40,0.3)",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/23/6c/be/236cbeb3-259c-9996-31a2-7bef8ca10bcd/194690837296_cover.jpg/600x600bb.jpg",
     spotify: "https://open.spotify.com/track/4OcQ0WMKxJTBvqv4PcuVAY",
-    apple: "https://music.apple.com/us/album/buga-lo-lo-lo-feat-tekno/1626468020",
+    apple: "https://music.apple.com/us/album/buga-lo-lo-lo-feat-tekno-single/1621384030",
     youtube: "https://www.youtube.com/watch?v=Y3DLPYBSpYE",
   },
   {
     year: "2021",
-    title: "Barnabas",
-    type: "EP",
+    title: "Lie",
+    type: "Single",
     artist: "Kizz Daniel",
-    tint: "from-[#0a2018] via-[#04140c] to-[#050505]",
-    accent: "rgba(60,220,160,0.18)",
-    spotify: "https://open.spotify.com/album/3hyUSO7TFvjzAaBaR2gK4q",
-    apple: "https://music.apple.com/us/album/barnabas-ep/1591411960",
-    youtube: "https://www.youtube.com/playlist?list=OLAK5uy_kVZQ_pgKb7sOiFD3WqVgvUVm-MqypMHHc",
-  },
-  {
-    year: "2020",
-    title: "King Of Love",
-    type: "Studio Album",
-    artist: "Kizz Daniel",
-    tint: "from-[#2a0820] via-[#180414] to-[#050505]",
-    accent: "rgba(220,80,180,0.22)",
-    spotify: "https://open.spotify.com/album/4nM02nIxRPC4SBOFhgYQHy",
-    apple: "https://music.apple.com/us/album/king-of-love/1503558316",
-    youtube: "https://www.youtube.com/playlist?list=OLAK5uy_lTDvBs6kytlqYsf-O5g-Yk5wfdEbKaScY",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/06/1d/2f/061d2fd5-4831-e669-d172-78a07eb4a4d5/194690571121_cover.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/lie-single/1576263604",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
   },
   {
     year: "2018",
     title: "No Bad Songz",
     type: "Studio Album",
     artist: "Kizz Daniel",
-    tint: "from-[#08182a] via-[#040c18] to-[#050505]",
-    accent: "rgba(80,160,220,0.22)",
-    spotify: "https://open.spotify.com/album/4iVEepGsCsLpFiOSV0DiUL",
-    apple: "https://music.apple.com/us/album/no-bad-songz/1438555158",
-    youtube: "https://www.youtube.com/playlist?list=OLAK5uy_kLpx2INW5e6h7qNCWcLVfWUVk_4tx9-eM",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/02/8e/d7/028ed72a-5d84-653e-790d-c550033a6e80/5050580700604.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/no-bad-songz/6769689937",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
+  },
+  {
+    year: "2018",
+    title: "One Ticket",
+    type: "Single with Davido",
+    artist: "Kizz Daniel",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/3d/e9/ab/3de9ab98-feda-5740-fa64-633093042d6e/5050580695832.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/one-ticket-single/6768917451",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
   },
   {
     year: "2016",
     title: "New Era",
     type: "Debut Album",
     artist: "Kizz Daniel",
-    tint: "from-[#1a1a1a] via-[#0d0d0d] to-[#050505]",
-    accent: "rgba(255,255,255,0.12)",
-    spotify: "https://open.spotify.com/album/5VlbAEt2vwLOgC7zRrtsgI",
-    apple: "https://music.apple.com/us/album/new-era/1118330589",
-    youtube: "https://www.youtube.com/playlist?list=OLAK5uy_n6L84B6sN6tFxAQt8FFs9MaXEZTfqUe6Q",
+    cover:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/56/12/64/56126475-5a72-f262-f227-a8666dce10a7/739042.jpg/600x600bb.jpg",
+    spotify: "https://open.spotify.com/artist/1X6cBGnXpEpN7CmflLKmLV",
+    apple: "https://music.apple.com/us/album/new-era/1817530403",
+    youtube: "https://www.youtube.com/@KizzDanielVEVO",
   },
 ];
 
@@ -109,39 +177,31 @@ export function CatalogueSection() {
               transition={{ duration: 0.6, delay: 0.1 + i * 0.07 }}
               className="group"
             >
-              <div
-                className={`relative aspect-square overflow-hidden bg-gradient-to-br ${r.tint} flex flex-col items-center justify-center p-6 text-center`}
-                style={{
-                  boxShadow: `inset 0 0 80px ${r.accent}, 0 20px 50px rgba(0,0,0,0.5)`,
-                }}
+              <a
+                href={r.spotify}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block relative aspect-square overflow-hidden bg-[#0a0a0a]"
+                style={{ boxShadow: "0 20px 50px rgba(0,0,0,0.5)" }}
               >
-                <div
-                  className="absolute inset-0 opacity-60"
-                  style={{
-                    background: `radial-gradient(ellipse at 50% 30%, ${r.accent}, transparent 65%)`,
-                  }}
+                <img
+                  src={r.cover}
+                  alt={`${r.title} cover art`}
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <span className="relative font-condensed text-[10px] tracking-[4px] uppercase text-white/40 mb-3">
-                  FLYBOI · {r.year}
-                </span>
-                <span
-                  className="relative font-display text-white leading-[0.9] tracking-wider"
-                  style={{ fontSize: "clamp(28px, 3vw, 40px)" }}
-                >
-                  {r.title}
-                </span>
-                <span className="relative font-condensed text-[11px] tracking-[3px] uppercase text-white/50 mt-3">
-                  {r.artist}
-                </span>
-              </div>
+              </a>
               <div className="pt-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-condensed text-[11px] tracking-[3px] uppercase text-white/75">
-                    {r.type}
+                <div className="flex items-center justify-between mb-1">
+                  <span className="font-display text-white tracking-wider text-[20px] leading-tight">
+                    {r.title}
                   </span>
                   <span className="font-condensed text-[11px] tracking-[3px] uppercase text-brand-gold">
                     {r.year}
                   </span>
+                </div>
+                <div className="font-condensed text-[11px] tracking-[3px] uppercase text-white/55 mb-3">
+                  {r.type}
                 </div>
                 <div className="flex gap-3 text-[11px] font-condensed tracking-[2px] uppercase">
                   <a
