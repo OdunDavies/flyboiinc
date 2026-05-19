@@ -2,15 +2,14 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const dates = [
-  { date: "Jul 12, 2025", venue: "O2 Academy Brixton", city: "London, United Kingdom" },
-  { date: "Jul 19, 2025", venue: "Hammerstein Ballroom", city: "New York, USA" },
-  { date: "Aug 02, 2025", venue: "Afro Nation", city: "Portimão, Portugal" },
-  { date: "Aug 23, 2025", venue: "Eko Convention Centre", city: "Lagos, Nigeria" },
-  {
-    date: "Sep 06, 2025",
-    venue: "Accra International Conference Centre",
-    city: "Accra, Ghana",
-  },
+  { date: "Jun 13, 2026", venue: "O2 Academy Brixton", city: "London, United Kingdom" },
+  { date: "Jun 27, 2026", venue: "Hammerstein Ballroom", city: "New York, USA" },
+  { date: "Jul 11, 2026", venue: "The Novo", city: "Los Angeles, USA" },
+  { date: "Jul 18, 2026", venue: "Afro Nation", city: "Portimão, Portugal" },
+  { date: "Aug 08, 2026", venue: "Accor Arena", city: "Paris, France" },
+  { date: "Sep 05, 2026", venue: "Eko Convention Centre", city: "Lagos, Nigeria" },
+  { date: "Sep 26, 2026", venue: "Accra Sports Stadium", city: "Accra, Ghana" },
+  { date: "Oct 17, 2026", venue: "Coca-Cola Arena", city: "Dubai, UAE" },
 ];
 
 export function TourSection() {
